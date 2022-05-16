@@ -1,66 +1,81 @@
-from tkinter import Tk, Label, Button, W, E
+from tkinter import Label, Button, RIGHT, LEFT, BOTH, RAISED, messagebox
 from tkinter.ttk import Frame, Style
 from random import choice
+
 import main as main
+import reader as reader
+
+name = "First Meeting"
+r=reader.reader(name)
 
 class AppFrame(Frame):
     isStart = False
     isWord = False
+    isDef = False
     los = 0
 
-    def initGui(self):
-        self.title("DLLAP")
-        #App.state('zoomed')
-        # App.geometry("600x400")
-        #App.config(background="#505050")
+    def initGUI(self):
 
-        Style().configure("Interface", padding=(0, 5, 0, 5), font=("Calibri 80 bold"))
+        self.master.title("DLLAP")
+        self.master.state('zoomed')
+        self.style = Style()
+        self.style.theme_use("default")
 
-        self.columnconfigure(0, pad=3)
-        self.columnconfigure(1, pad=3)
-        self.columnconfigure(2, pad=3)
+        self.word = Label(self, text="W1", font=("Calibri 80 bold"), fg="#FFFFFF", background="#505050")
+        self.word.pack(fill=BOTH, expand=True)
 
-        self.rowconfigure(0, pad=3)
-        self.rowconfigure(1, pad=3)
-        self.rowconfigure(2, pad=3)
+        self.definition = Label(self, text="W2", font=("Calibri 80 bold"), fg="#FFFFFF", background="#505050")
+        self.definition.pack(fill=BOTH, expand=True)
 
-        #self.bind("<Key>", self.key_pressed)
+        self.pack(fill=BOTH, expand=True)
 
-        self.word = Label(self, text="", font=("Calibri 80 bold"), fg="#FFFFFF", background="#505050")
-        self.word.grid(row=1,columnspan=3)
-        self.definition = Label(self, text="", font=("Calibri 80 bold"), fg="#FFFFFF", background="#505050")
-        self.definition.grid(row=2,columnspan=3)
-        #self.word.pack()
-        #self.definition.pack()
+        learn = Button(self, text="Start", font="Calibri 20 bold", fg="#505050", command=lambda: self.startLearning(),padx=50)
+        learn.pack(side=RIGHT)
 
-        #learn = Button(self, text="Start", font="Calibri 20 bold", fg="#505050", command=lambda: self.startLearning())
-        #learn.pack()
-
-        self.pack()
+        self.master.bind("<Key>", self.key_pressed)
 
     def startLearning(self):
+
+        if self.isStart==False:
+            r = reader.reader(name)
+
         self.isStart = True
         self.goFurther()
 
     def goFurther(self):
 
-        if (self.isStart==True):
+        if (self.isStart==True and len(r.decks.get(name))!=0):
+
+            self.isDef = False
 
             if self.isWord == False:
                 self.word.config(text="")
                 self.definition.config(text="")
-                self.los = choice(range(len(main.r.decks.get(main.name))))
-                print(len(main.r.decks.get(main.name)))
-                newWord = main.r.decks.get(main.name)[self.los].get("Word")
+                self.los = choice(range(len(r.decks.get(name))))
+                newWord = r.decks.get(name)[self.los].get("Word")
                 self.word.config(text=newWord)
                 self.isWord = True
 
             elif self.isWord == True:
 
-                newDef = main.r.decks.get(main.name)[self.los].get("Def")
+                newDef = r.decks.get(name)[self.los].get("Def")
                 self.definition.config(text=newDef)
+                self.isDef = True
                 self.isWord = False
 
+    def removeWord(self):
+
+        if len(r.decks.get(name))==0:
+            messagebox.showinfo("Congratulations!", "You have learned all the words!")
+            self.endLearning()
+        else:
+            if self.isDef==True:
+                r.decks.get(name).pop(self.los)
+
+    def endLearning(self):
+        self.isStart=False
+        self.word.config(text="")
+        self.definition.config(text="")
 
     def key_pressed(self, event):
 
@@ -70,6 +85,7 @@ class AppFrame(Frame):
             elif (event.char=="1"):
                 self.goFurther()
             elif (event.char=="2"):
+                self.removeWord()
                 self.goFurther()
 
     def __init__(self):
