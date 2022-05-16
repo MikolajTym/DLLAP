@@ -7,26 +7,26 @@ class AppFrame():
     word = Label
     definition = Label
 
-    def startLearning(self):
+    def startLearning(self, word, definition):
         los=0
         if self.isDef == False:
-            self.word.config(text="")
-            self.definition.config(text="")
+            word.config(text="")
+            definition.config(text="")
             los = choice(range(len(main.r.decks.get("english2"))))
             newWord = main.r.decks.get("english2")[los].get("Word")
             self.newDef=main.r.decks.get("english2")[los].get("Def")
-            self.word.config(text=newWord)
+            word.config(text=newWord)
             self.isDef = True
 
         elif self.isDef==True:
 
-            self.definition.config(self,text=self.newDef)
+            definition.config(text=self.newDef)
             self.isDef = False
-            main.r.decks.get("english2").pop(los)
+            #main.r.decks.get("english2").pop(los)
 
     def key_pressed(self,event):
         if(event.char==" "):
-            #self.startLearning()
+            #self.startLearning() # TODO DOESNT WORKING
             pass
 
     def __init__(self):
@@ -43,7 +43,7 @@ class AppFrame():
         word.pack()
         definition.pack()
 
-        learn = Button(App, text="Start", font=50, fg="#505050", command=lambda: self.startLearning(self))
+        learn = Button(App, text="Start", font=50, fg="#505050", command=lambda: self.startLearning(word, definition))
         learn.pack()
 
         App.mainloop()
