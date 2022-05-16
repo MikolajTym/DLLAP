@@ -1,0 +1,372 @@
+initially
+początkowo
+fairly
+rzetelnie
+forward
+przesłać dalej
+hint
+wskazówka
+arise
+powstawać
+delineated
+nakreślony
+Best regards
+z poważaniem
+outlook
+perspektywy
+kick-off
+rozpoczęcie / otwarcie
+relevant
+istotny / znaczący
+relevance
+związek (z tematem)
+phase
+etap
+date
+data
+approach
+podejście / zbliżać / zwracać się
+data-driven
+oparty na danych
+manner
+sposób zachowania
+area
+rejon
+clustering
+gromadzenie
+content
+treść
+adjustment
+modyfikacja
+template
+wzór
+analysis
+analiza
+preselection
+wstępne wybieranie
+cropping
+przycinanie
+perform
+działać / pracować
+progress
+postęp
+in progress
+w toku
+resolved
+rozwiązany
+feedback
+informacja zwrotna
+on hold
+być odłożonym na później
+combined
+połączony
+internal
+krajowy, wewnętrzny
+DWH - Data Warehouse
+hurtownia danych
+concern
+dotyczyć
+community
+społeczność
+including
+między innymi
+ratings
+wskaźnik popularności
+map
+przekształcenie
+text span
+container na text
+entity
+jednostka, podmiot
+temporal
+tymczasowy
+reference
+odniesienie
+background
+kontekst, tło
+design
+projekt
+layout
+kompozycja, układ graficzny
+clipart
+małe obrazki
+tag
+etykieta
+spotlight
+centrum uwagi
+conduct
+przeprowadzać, przewodzić
+NLP - Natural Language Processing
+analiza języka naturalnego
+word embedding
+słowa - wektory w analizie tekstu
+routine
+procedura
+available
+dostępny
+collect
+zbierać
+extract
+wyselekcjonować
+apply
+zastosować
+various
+zróżnicowany
+technique
+metoda, sposób
+magnitude
+rozmiar
+phenomenon
+zjawisko
+dimensions
+wymiary
+variation
+odmiana
+hue
+odcień koloru
+intensity
+intensywność
+obvious
+ewidentny, oczywisty
+cue
+sygnał
+vary
+różnić się
+develop
+rozwijać
+overlap
+nakładać się na siebie
+frequency
+częstotliwość
+specific
+konkretny
+bundle
+paczka
+enlarging
+powiększenie
+cover
+obejmować
+provide
+dostarczać
+stripe
+pasek - kolorowa linia
+belong
+należeć
+trip
+wycieczka
+match
+dopasowanie
+entire
+cały
+generaized
+ogólny
+palete
+paleta barw
+compare
+porównywać
+chapter
+rozdział
+basis
+podstawa
+browse
+przeglądać
+criterion
+kryterium
+account
+konto, raport
+indicate
+wskazywać na
+contain
+zawierać
+sequence
+porządek
+at least
+przynajmniej
+counter
+licznik
+retrieval
+odzyskanie
+recreation
+rekonstrukcja
+respective
+indywidualny
+attribute
+cecha
+via
+przez
+ruleset
+zestaw reguł
+deviation
+odstępstwo
+corner
+róg
+association
+powiązanie
+annotation
+komentarz
+strict
+surowy, dokładny
+guidelines
+wytyczne
+follow-up
+ciąg dalszy
+issue
+kwestia, sprawa
+obtained
+uzyskany
+GPU - graphics processing unit
+procesor graficzny
+recursive
+rekurencyjny
+regard
+odniesienie
+kind
+rodzaj
+vertical
+pionowo
+horizontal
+poziomo
+scrapbook
+album do wklejania
+assessment
+wycena
+arrangement
+ustalenie, urządzenie
+consistency
+spójność
+clarity
+jasność
+remark
+spostrzegać
+case
+przypadek
+rotated
+obrócony
+query
+zapytanie
+deployed
+rozmieszczony
+along
+naprzód, dalej
+surface
+powierzchnia
+reason
+przyczyna
+necessary
+niezbędny
+EXIF - Exchangeable Image File Format
+metadane ze zdjęć
+tone
+odcień, ton głosu
+output
+wyniki pracy, wyjście
+config
+konfiguracja
+transparent
+przezroczysty, szczery
+stock
+zapas
+ideation
+tworzenie idei
+persona
+znana osoba
+order
+kolejność, polecenie, porządek
+incentive
+motywacja
+untouched
+nietknięty
+conclusion
+wniosek
+prevalent
+powszechny
+perception
+wyobrażenie
+introduce
+wprowadzać, przedstawiać
+consistent
+spójny
+fit
+pasować, mieścić się
+outer
+zewnętrzny
+consideration
+namysł
+previous
+poprzedni
+combination
+kombinacja
+lightness
+jasność
+correct
+poprawny
+multiple
+wielokrotny
+complimentary
+bezpłatny
+scheme
+schemat
+diverse
+różnorodny
+sensitive
+wrażliwy
+aspect
+punkt widzenia
+threshold
+próg
+certain
+pewien
+reach
+osiągnąć
+award
+nagroda
+external
+zewnętrzny
+wrap
+zapakować
+syntax
+składnia
+beside
+obok
+resolved
+stanowczy
+thumbnail
+miniaturka zdjęcia
+alignment
+wyrównanie
+annotation
+adnotacja
+well-spotted
+dobrze zauważeni
+cropping
+przycinać
+silhouette
+sylwetka
+related
+powiązany
+bound
+granica
+instead of
+zamiast
+fine-tune
+dostroić
+panoptic
+wszechstronny
+particularly
+szczególnie
+suitable
+odpowiedni
+cityscape
+panorama miasta
+urban
+miejski
+supsend
+przerywać
+occur
+zdarzać się
+thread
+wątek
+almost
+prawie
+opportunity
+możliwość
