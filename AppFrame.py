@@ -2,7 +2,9 @@ from tkinter import Label, Button, RIGHT, LEFT, BOTH, RAISED, messagebox
 from tkinter.ttk import Frame, Style
 from random import choice
 
-import main as main
+from gtts import gTTS # Text to speech conversion
+from playsound import playsound
+
 import reader as reader
 
 name = "First Meeting"
@@ -13,6 +15,24 @@ class AppFrame(Frame):
     isWord = False
     isDef = False
     los = 0
+    fontSize = 180
+    screen_width=1920
+    sizeWord = 0
+    #screen_width = self.winfo_screenwidth()
+    #screen_height = self.winfo_screenheight()
+
+
+    def changeSizeOfFont(self, label, size):
+
+        while (size>(self.screen_width-50)): # TODO WIDTH NIE DZIAŁA
+            self.fontSize-=10
+            print(str(size)+" > "+str(self.screen_width-50))
+            print(self.fontSize)
+
+        label.config(font=(f"Calibri {self.fontSize} bold"))
+
+        self.fontSize=180
+
 
     def initGUI(self):
 
@@ -21,11 +41,11 @@ class AppFrame(Frame):
         self.style = Style()
         self.style.theme_use("default")
 
-        self.word = Label(self, text="W1", font=("Calibri 80 bold"), fg="#FFFFFF", background="#505050")
-        self.word.pack(fill=BOTH, expand=True)
+        self.word = Label(self, text="", font=(f"Calibri {self.fontSize} bold"), fg="#FFFFFF", background="#505050")
+        self.word.pack(expand=True)
 
-        self.definition = Label(self, text="W2", font=("Calibri 80 bold"), fg="#FFFFFF", background="#505050")
-        self.definition.pack(fill=BOTH, expand=True)
+        self.definition = Label(self, text="", font=(f"Calibri {self.fontSize} bold"), fg="#FFFFFF", background="#505050")
+        self.definition.pack(expand=True)
 
         self.pack(fill=BOTH, expand=True)
 
@@ -53,7 +73,15 @@ class AppFrame(Frame):
                 self.definition.config(text="")
                 self.los = choice(range(len(r.decks.get(name))))
                 newWord = r.decks.get(name)[self.los].get("Word")
-                self.word.config(text=newWord)
+                self.word.config(text=newWord, font=(f"Calibri {self.fontSize} bold"))
+
+
+                #speech = gTTS(text=newWord, lang="en", slow=False)
+                #speech.save("speech.mp3")
+                #playsound("speech.mp3")
+
+                #self.changeSizeOfFont(self.word)
+
                 self.isWord = True
 
             elif self.isWord == True:
@@ -82,6 +110,8 @@ class AppFrame(Frame):
         if (self.isStart==True):
             if(event.char==" "):
                 self.goFurther()
+                self.sizeWord=self.definition.winfo_width()
+                self.changeSizeOfFont(self.definition, self.sizeWord)
             elif (event.char=="1"):
                 self.goFurther()
             elif (event.char=="2"):
